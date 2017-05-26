@@ -166,7 +166,7 @@ class SecurityUtil
         $separator = $this->SEPARATOR_CHAR_MAP[$type];
         if ('phone' == $type) {
             if (strlen($data) != 4) {
-                throw new Exception("phoneNumber error");
+                throw new \Exception("phoneNumber error");
             }
 
             return $separator.$this->hmacMD5EncryptToBase64($data, $secretContext->secret).$separator;

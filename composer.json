@@ -10,7 +10,8 @@
     }
   ],
   "require": {
-    "php": ">=5.6.0"
+    "php": ">=5.6.0",
+    "ext-curl": "*"
   },
   "autoload": {
     "files": [
@@ -19,5 +20,11 @@
     "psr-4": {
       "Top\\": "top"
     }
+  },
+  "support": {
+    "issues": "https://github.com/xcorp1986/alibaba-dayu/issues"
+  },
+  "suggest": {
+    "ext-yac": "*"
   }
 }

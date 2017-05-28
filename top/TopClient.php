@@ -10,7 +10,7 @@ class TopClient
 
     public $gatewayUrl = "http://gw.api.taobao.com/router/rest";
 
-    public $format = "xml";
+    public $format = "json";
 
     public $connectTimeout;
 
@@ -219,7 +219,7 @@ class TopClient
         if ($this->checkRequest) {
             try {
                 $request->check();
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
 
                 $result->code = $e->getCode();
                 $result->msg = $e->getMessage();
@@ -277,7 +277,7 @@ class TopClient
             } else {
                 $resp = $this->curl($requestUrl, $apiParams);
             }
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $this->logCommunicationError(
                 $sysParams["method"],
                 $requestUrl,
